@@ -1,6 +1,7 @@
 function circles() {
 	canvas = document.getElementById("circle");
 	var width = document.getElementById('content');
+	//canvas.style.width = "300px";
 	canvas.width = canvas.offsetWidth;
 	canvas.height = canvas.offsetHeight;
 	context = canvas.getContext("2d");
@@ -13,8 +14,9 @@ function circles() {
 			var myCircle = circle();
 			DrawCircle(myCircle);
 			circles.push(myCircle);
-			
 		}, 1000);
+		
+		//requestAnimationFrame
 		
 		setInterval( function(){
 				context.clearRect(0, 0, context.canvas.width, context.canvas.height);
@@ -38,7 +40,6 @@ function circles() {
 					circles[i].x += circles[i].dx;
 					circles[i].y += circles[i].dy;
 					DrawCircle(circles[i]);
-					
 				}
 			}, 1);
 		count++;

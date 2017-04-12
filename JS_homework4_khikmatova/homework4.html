@@ -12,11 +12,11 @@
 		background-color: #212121;
 	}
 	.container {
-		width: 1000px;
+		width: 90%;
 		margin: 25px auto 0;
 	}
 	canvas {
-		width: 1000px;
+		width: 100%;
 		height: 600px;
 		border: solid 5px #00897b;
 		border-radius: 10px;
@@ -28,10 +28,18 @@
 <div class="container">
 	<canvas id="circle"></canvas>
 </div>
- 
+ <p>My text!!!</p>
 <script>
-
+	var tags = ["html", "body", "head", "div", "ul", "ol", "li", "a", "p", "input", 
+	"button", "h1", "h2", "h3", "h4", "h5", "h6", "img", "canvas", "header", 
+	"footer", "table", "td", "tr", "th", "form", "i", "b", "strong", "nav", "meta", 
+	"main", "video", "audio"];
+	for (int i = 0; i < tags.length; i++) {
+		var elements = document.body.getElementsByTagName('p');
+		console.log(tags[i] + elements.length);
+	}
 </script>
 
 </body>
 </html> 
+<!--mdn animation-->
