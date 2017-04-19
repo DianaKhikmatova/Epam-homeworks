@@ -9,14 +9,24 @@ for (let i = 0; i < tags.length; i++) {
 
 var childNodesBody = document.body.childNodes;
 var childNodesHead = document.head.childNodes;
+
+//let node = document.getElementsByTagName("head");
+//let nodeChildrens = node.childNodes;
+
+console.log(document.getElementsByTagName("head")[0].textContent);
+
+console.log(childNodesHead[0].textContent);
+var childNodesHead = document.head.childNodes;
 var count = 0;
 for (var i = 0; i < childNodesBody.length; i++) {
 if (childNodesBody[i].nodeType === 3) {
+		//console.log(childNodesBody[i].textContent);
 		count++;
     }
 }
 for (var i = 0; i < childNodesHead.length; i++) {
 if (childNodesHead[i].nodeType === 3) {
+		//console.log(childNodesHead[i].textContent);
 		count++;
     }
 }	
